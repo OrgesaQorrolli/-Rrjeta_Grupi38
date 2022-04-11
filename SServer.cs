@@ -12,7 +12,7 @@ namespace SServer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Server is waiting for connections...");
+            Console.WriteLine("Server është duke pritur për lidhje...");
             UdpClient client = new UdpClient(8080);
 
             IPEndPoint remoteip = new IPEndPoint(IPAddress.Any, 8080);
@@ -24,14 +24,14 @@ namespace SServer
             {
 
                 string message = Encoding.ASCII.GetString(receivedbytes);
-                Console.WriteLine("received message " + message);
+                Console.WriteLine("mesazhi i pranuar " + message);
 
             }
 
 
             else
             {
-                Console.WriteLine("Empty message received!");
+                Console.WriteLine("Mesazhi i pranuar është i zbrazët!");
             }
 
                 Console.ReadLine();
